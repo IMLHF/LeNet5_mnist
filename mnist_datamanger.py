@@ -18,7 +18,6 @@ def read_testset_to_ram():
 
 def get_batch_use_tfdata(features, labels):
   features_placeholder = tf.placeholder(features.dtype, features.shape)
-  print(labels.dtype)
   labels_placeholder = tf.placeholder(labels.dtype, labels.shape)
 
   dataset = tf.data.Dataset.from_tensor_slices((features_placeholder, labels_placeholder))

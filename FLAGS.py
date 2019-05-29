@@ -59,4 +59,4 @@ class C004(base_config):
   ACTIVATION = tf.nn.tanh
   OPTIMIZER = tf.train.AdamOptimizer
 
-PARAM = C001
+PARAM = C002
