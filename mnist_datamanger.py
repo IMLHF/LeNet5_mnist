@@ -10,11 +10,11 @@ import FLAGS
 
 def read_trainset_to_ram():
   mnist = input_data.read_data_sets(FLAGS.PARAM.MNIST_DIR, one_hot=True)
-  return np.reshape(mnist.train.images,[-1,28,28]), np.array(mnist.train.labels,np.float32)
+  return np.reshape(mnist.train.images,[-1,28,28,1]), np.array(mnist.train.labels,np.float32)
 
 def read_testset_to_ram():
   mnist = input_data.read_data_sets(FLAGS.PARAM.MNIST_DIR, one_hot=True)
-  return np.reshape(mnist.test.images,[-1,28,28]), np.array(mnist.test.labels,np.float32)
+  return np.reshape(mnist.test.images,[-1,28,28,1]), np.array(mnist.test.labels,np.float32)
 
 def get_batch_use_tfdata(features, labels):
   features_placeholder = tf.placeholder(features.dtype, features.shape)
