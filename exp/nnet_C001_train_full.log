@@ -1,0 +1,170 @@
+FLAGS.PARAM:
+__doc__:None
+POOL_PADDING:VALID
+__module__:FLAGS
+SAVE_DIR:exp
+CONV_PADDING:VALID
+GPU_RAM_ALLOW_GROWTH:True
+MNIST_DIR:MNIST_data
+CHECK_POINT:nnet_LeNet5_C001
+__weakref__:<attribute '__weakref__' of 'base_config' objects>
+__dict__:<attribute '__dict__' of 'base_config' objects>
+DROP_RATE:0.3
+EPOCHS:35
+learning_rate:0.0005
+BATCH_SIZE:512
+WARNING:tensorflow:From F:\OneDrive - bjfu.edu.cn\Course\图像处理算法及应用\exp\exp2\LeNet5_mnist\mnist_datamanger.py:12: read_data_sets (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use alternatives such as official/mnist/dataset.py from tensorflow/models.
+WARNING:tensorflow:From D:\python3.5.2\lib\site-packages\tensorflow\contrib\learn\python\learn\datasets\mnist.py:260: maybe_download (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please write your own downloading logic.
+WARNING:tensorflow:From D:\python3.5.2\lib\site-packages\tensorflow\contrib\learn\python\learn\datasets\mnist.py:262: extract_images (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.data to implement this functionality.
+Extracting MNIST_data\train-images-idx3-ubyte.gz
+WARNING:tensorflow:From D:\python3.5.2\lib\site-packages\tensorflow\contrib\learn\python\learn\datasets\mnist.py:267: extract_labels (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.data to implement this functionality.
+Extracting MNIST_data\train-labels-idx1-ubyte.gz
+WARNING:tensorflow:From D:\python3.5.2\lib\site-packages\tensorflow\contrib\learn\python\learn\datasets\mnist.py:110: dense_to_one_hot (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.one_hot on tensors.
+Extracting MNIST_data\t10k-images-idx3-ubyte.gz
+Extracting MNIST_data\t10k-labels-idx1-ubyte.gz
+WARNING:tensorflow:From D:\python3.5.2\lib\site-packages\tensorflow\contrib\learn\python\learn\datasets\mnist.py:290: DataSet.__init__ (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use alternatives such as official/mnist/dataset.py from tensorflow/models.
+float32
+---------
+Variables: name (type shape) [size]
+---------
+w_conv1:0 (float32_ref 5x5x1x6) [150, bytes: 600]
+w_conv2:0 (float32_ref 5x5x6x16) [2400, bytes: 9600]
+w_fc1:0 (float32_ref 256x120) [30720, bytes: 122880]
+w_fc2:0 (float32_ref 120x84) [10080, bytes: 40320]
+w_fc3:0 (float32_ref 84x10) [840, bytes: 3360]
+b_conv1:0 (float32_ref 6) [6, bytes: 24]
+b_conv2:0 (float32_ref 16) [16, bytes: 64]
+b_fc1:0 (float32_ref 120) [120, bytes: 480]
+b_fc2:0 (float32_ref 84) [84, bytes: 336]
+b_fc3:0 (float32_ref 10) [10, bytes: 40]
+Total size of variables: 44426
+Total bytes of variables: 177704
+2019-05-29 17:14:51.617321: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-05-29 17:14:51.804158: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties:
+name: GeForce GTX 1060 with Max-Q Design major: 6 minor: 1 memoryClockRate(GHz): 1.48
+pciBusID: 0000:01:00.0
+totalMemory: 6.00GiB freeMemory: 4.97GiB
+2019-05-29 17:14:51.819805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-05-29 17:14:52.688965: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-29 17:14:52.699017: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0
+2019-05-29 17:14:52.702200: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N
+2019-05-29 17:14:52.705854: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4724 MB memory) -> physical GPU
+(device: 0, name: GeForce GTX 1060 with Max-Q Design, pci bus id: 0000:01:00.0, compute capability: 6.1)
+INFO:tensorflow:Train Iteration 001:
+    Train.LOSS 1.9867, ckpt(nnet_iter1_trloss1.9867_duration2s) saved, EPOCH DURATION: 2.20s
+
+INFO:tensorflow:Train Iteration 002:
+    Train.LOSS 1.1568, ckpt(nnet_iter2_trloss1.1568_duration0s) saved, EPOCH DURATION: 0.86s
+
+INFO:tensorflow:Train Iteration 003:
+    Train.LOSS 0.5318, ckpt(nnet_iter3_trloss0.5318_duration0s) saved, EPOCH DURATION: 0.92s
+
+INFO:tensorflow:Train Iteration 004:
+    Train.LOSS 0.3104, ckpt(nnet_iter4_trloss0.3104_duration0s) saved, EPOCH DURATION: 0.92s
+
+INFO:tensorflow:Train Iteration 005:
+    Train.LOSS 0.2309, ckpt(nnet_iter5_trloss0.2309_duration0s) saved, EPOCH DURATION: 0.97s
+
+INFO:tensorflow:Train Iteration 006:
+    Train.LOSS 0.1950, ckpt(nnet_iter6_trloss0.1950_duration1s) saved, EPOCH DURATION: 1.04s
+
+INFO:tensorflow:Train Iteration 007:
+    Train.LOSS 0.1716, ckpt(nnet_iter7_trloss0.1716_duration0s) saved, EPOCH DURATION: 0.97s
+
+INFO:tensorflow:Train Iteration 008:
+    Train.LOSS 0.1540, ckpt(nnet_iter8_trloss0.1540_duration1s) saved, EPOCH DURATION: 1.08s
+
+INFO:tensorflow:Train Iteration 009:
+    Train.LOSS 0.1394, ckpt(nnet_iter9_trloss0.1394_duration1s) saved, EPOCH DURATION: 1.12s
+
+INFO:tensorflow:Train Iteration 010:
+    Train.LOSS 0.1289, ckpt(nnet_iter10_trloss0.1289_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 011:
+    Train.LOSS 0.1197, ckpt(nnet_iter11_trloss0.1197_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 012:
+    Train.LOSS 0.1128, ckpt(nnet_iter12_trloss0.1128_duration0s) saved, EPOCH DURATION: 0.97s
+
+INFO:tensorflow:Train Iteration 013:
+    Train.LOSS 0.1046, ckpt(nnet_iter13_trloss0.1046_duration0s) saved, EPOCH DURATION: 0.96s
+
+INFO:tensorflow:Train Iteration 014:
+    Train.LOSS 0.0988, ckpt(nnet_iter14_trloss0.0988_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 015:
+    Train.LOSS 0.0929, ckpt(nnet_iter15_trloss0.0929_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 016:
+    Train.LOSS 0.0880, ckpt(nnet_iter16_trloss0.0880_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 017:
+    Train.LOSS 0.0828, ckpt(nnet_iter17_trloss0.0828_duration0s) saved, EPOCH DURATION: 0.92s
+
+INFO:tensorflow:Train Iteration 018:
+    Train.LOSS 0.0786, ckpt(nnet_iter18_trloss0.0786_duration0s) saved, EPOCH DURATION: 0.90s
+
+INFO:tensorflow:Train Iteration 019:
+    Train.LOSS 0.0753, ckpt(nnet_iter19_trloss0.0753_duration0s) saved, EPOCH DURATION: 0.91s
+
+INFO:tensorflow:Train Iteration 020:
+    Train.LOSS 0.0727, ckpt(nnet_iter20_trloss0.0727_duration0s) saved, EPOCH DURATION: 0.90s
+
+INFO:tensorflow:Train Iteration 021:
+    Train.LOSS 0.0686, ckpt(nnet_iter21_trloss0.0686_duration0s) saved, EPOCH DURATION: 0.89s
+
+INFO:tensorflow:Train Iteration 022:
+    Train.LOSS 0.0665, ckpt(nnet_iter22_trloss0.0665_duration0s) saved, EPOCH DURATION: 0.91s
+
+INFO:tensorflow:Train Iteration 023:
+    Train.LOSS 0.0640, ckpt(nnet_iter23_trloss0.0640_duration0s) saved, EPOCH DURATION: 0.89s
+
+INFO:tensorflow:Train Iteration 024:
+    Train.LOSS 0.0609, ckpt(nnet_iter24_trloss0.0609_duration0s) saved, EPOCH DURATION: 0.89s
+
+INFO:tensorflow:Train Iteration 025:
+    Train.LOSS 0.0598, ckpt(nnet_iter25_trloss0.0598_duration0s) saved, EPOCH DURATION: 0.94s
+
+INFO:tensorflow:Train Iteration 026:
+    Train.LOSS 0.0568, ckpt(nnet_iter26_trloss0.0568_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 027:
+    Train.LOSS 0.0544, ckpt(nnet_iter27_trloss0.0544_duration0s) saved, EPOCH DURATION: 0.94s
+
+INFO:tensorflow:Train Iteration 028:
+    Train.LOSS 0.0515, ckpt(nnet_iter28_trloss0.0515_duration0s) saved, EPOCH DURATION: 0.96s
+
+INFO:tensorflow:Train Iteration 029:
+    Train.LOSS 0.0518, ckpt(nnet_iter29_trloss0.0518_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 030:
+    Train.LOSS 0.0499, ckpt(nnet_iter30_trloss0.0499_duration0s) saved, EPOCH DURATION: 0.94s
+
+INFO:tensorflow:Train Iteration 031:
+    Train.LOSS 0.0477, ckpt(nnet_iter31_trloss0.0477_duration0s) saved, EPOCH DURATION: 0.96s
+
+INFO:tensorflow:Train Iteration 032:
+    Train.LOSS 0.0463, ckpt(nnet_iter32_trloss0.0463_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 033:
+    Train.LOSS 0.0443, ckpt(nnet_iter33_trloss0.0443_duration0s) saved, EPOCH DURATION: 0.94s
+
+INFO:tensorflow:Train Iteration 034:
+    Train.LOSS 0.0454, ckpt(nnet_iter34_trloss0.0454_duration0s) saved, EPOCH DURATION: 0.95s
+
+INFO:tensorflow:Train Iteration 035:
+    Train.LOSS 0.0430, ckpt(nnet_iter35_trloss0.0430_duration0s) saved, EPOCH DURATION: 0.98s
+
+INFO:tensorflow:Done training
