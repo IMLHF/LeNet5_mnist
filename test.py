@@ -1,6 +1,6 @@
 import tensorflow as tf
 import mnist_datamanger as mnist_reader
-from cnn_model import CNN_CLASSIFY
+from LeNet5_model import LeNet5_CLASSIFY
 import tensorflow.contrib.slim as slim
 import sys
 import os
@@ -17,7 +17,7 @@ def test():
         features, labels = mnist_reader.read_testset_to_ram()
         x_p, y_p, x_batch_tr, y_batch_tr, iter_testset = mnist_reader.get_batch_use_tfdata(features,labels)
     with tf.name_scope('model'):
-      model = CNN_CLASSIFY(x_batch_tr, y_batch_tr, CNN_CLASSIFY.infer)
+      model = LeNet5_CLASSIFY(x_batch_tr, y_batch_tr, LeNet5_CLASSIFY.infer)
     init = tf.group(tf.global_variables_initializer(),
                     tf.local_variables_initializer())
     g.finalize()
