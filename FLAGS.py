@@ -26,8 +26,13 @@ class C001(base_config):
 
 
 class C002(base_config):
-  CHECK_POINT = 'nnet_C002'
-  ACTIVATION = tf.nn.relu
+  CHECK_POINT = 'nnet_LeNet5_C002'
+  CONV1_FILTERS = 32
+  CONV2_FILTERS = 64
+  FC1_units = 1024
+  FC2_units = 512
+  FC3_units = 10
+  ACTIVATION = tf.nn.tanh
   OPTIMIZER = tf.train.AdamOptimizer
 
 
@@ -38,4 +43,4 @@ class C003(base_config):
 
 
 
-PARAM = C001
+PARAM = C002

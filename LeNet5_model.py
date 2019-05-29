@@ -19,11 +19,16 @@ class LeNet5_CLASSIFY(object):
     self._onehot_label_batch = onehot_label_batch
     # with tf.variable_scope('model'):
     weights = {
-        'w_conv1': tf.get_variable('w_conv1', [5, 5, 1, FLAGS.PARAM.CONV1_FILTERS], initializer=tf.random_normal_initializer(stddev=0.01)),
-        'w_conv2': tf.get_variable('w_conv2', [5, 5, 6, FLAGS.PARAM.CONV2_FILTERS], initializer=tf.random_normal_initializer(stddev=0.01)),
-        'w_fc1': tf.get_variable('w_fc1', [4 * 4 * 16, FLAGS.PARAM.FC1_units], initializer=tf.random_normal_initializer(stddev=0.01)),
-        'w_fc2': tf.get_variable('w_fc2', [FLAGS.PARAM.FC1_units, FLAGS.PARAM.FC2_units], initializer=tf.random_normal_initializer(stddev=0.01)),
-        'w_fc3': tf.get_variable('w_fc3', [FLAGS.PARAM.FC2_units, FLAGS.PARAM.FC3_units], initializer=tf.random_normal_initializer(stddev=0.01)),
+        'w_conv1': tf.get_variable('w_conv1', [5, 5, 1, FLAGS.PARAM.CONV1_FILTERS],
+                                   initializer=tf.random_normal_initializer(stddev=0.01)),
+        'w_conv2': tf.get_variable('w_conv2', [5, 5, FLAGS.PARAM.CONV1_FILTERS, FLAGS.PARAM.CONV2_FILTERS],
+                                   initializer=tf.random_normal_initializer(stddev=0.01)),
+        'w_fc1': tf.get_variable('w_fc1', [4 * 4 * FLAGS.PARAM.CONV2_FILTERS, FLAGS.PARAM.FC1_units],
+                                 initializer=tf.random_normal_initializer(stddev=0.01)),
+        'w_fc2': tf.get_variable('w_fc2', [FLAGS.PARAM.FC1_units, FLAGS.PARAM.FC2_units],
+                                 initializer=tf.random_normal_initializer(stddev=0.01)),
+        'w_fc3': tf.get_variable('w_fc3', [FLAGS.PARAM.FC2_units, FLAGS.PARAM.FC3_units],
+                                 initializer=tf.random_normal_initializer(stddev=0.01)),
     }
     biases = {
         'b_conv1': tf.get_variable('b_conv1', [FLAGS.PARAM.CONV1_FILTERS], initializer=tf.random_normal_initializer(stddev=0.01)),
